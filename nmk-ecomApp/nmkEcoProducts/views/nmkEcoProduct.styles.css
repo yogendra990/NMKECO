@@ -1,0 +1,30 @@
+.product1{
+  
+    left: -80px !important;
+    top:80px !important; 
+}
+/* .Laptop1{
+    box-shadow: 0.2px 0 0.5px 0 dimgray;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    cursor: pointer;
+} */
+.title{
+    text-align: center !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    cursor: pointer;
+}
+.cart{
+   right:-120px !important;
+   width:100%;
+}
+.productlist{
+    width: 100% !important;
+    float: right !important;
+    list-style: none !important;
+
+}
+
+  

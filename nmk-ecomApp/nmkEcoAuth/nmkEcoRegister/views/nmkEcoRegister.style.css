@@ -1,0 +1,39 @@
+.nmkEcoRegister {
+    background-image: url('../../../../shared/Images/ecommercelogistics.jpg');
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 100% !important;
+    height: 100% !important;
+    /* animation: EcoRegisterZoomEffect 5s infinite alternate;
+    -webkit-animation: EcoRegisterZoomEffect 5s infinite alternate;
+    -moz-animation: EcoRegisterZoomEffect 5s infinite alternate;
+    -o-animation: EcoRegisterZoomEffect 5s infinite alternate; */
+}
+/* @keyframes EcoRegisterZoomEffect{
+    0% { background-size:110% 110%; }
+    100% { background-size: 100% 100%; }
+} */
+
+.nmkEcoRegister_OverLay {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    z-index: 10;
+}
+.EcoRegister-card-content {
+    top: 50px;
+    max-height: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* .btn-primary:hover{
+    background-color:#f27d0a;
+    box-shadow: 0 0 0 0;
+} */
+
+.EcoForm {
+    top: -30px !important;
+}

@@ -1,1 +1,19 @@
-<div>Products</div>
+<div class="row">
+    <div class="container container-fluid">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product1" >                                                                                   
+                                            <table class="table table-responsive table-bordered table-striped">
+                                                    <tbody>
+                                                            <tr class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-responsive" ng-repeat="p in productList">
+                                                                    <td class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                                                            <img ng-src="{{p.ImagePath}}" class="img-responsive Laptop1" />
+                                                                            <h1 class="title" ng-bind="p.name"></h1>
+                                                                    </td>
+                                                            </tr>
+                                                    </tbody>
+                                            </table>                               
+                 <!-- <p class="help-block" ng-bind-html="productDescription"></p> -->
+             </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+.EcoLogin {
+    background-image: url('../../../../shared/Images/ecommercelogistics.jpg');
+    /* background-size: cover; */
+    
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 100% !important;
+    height: 100% !important;
+    opacity: 1 !important;
+    /* animation: EcoLoginZoomEffect 5s infinite alternate;
+    -webkit-animation: EcoLoginZoomEffect  5s infinite alternate;
+    -moz-animation: EcoLoginZoomEffect 5s infinite alternate; */
+}
+/* @keyframes EcoLoginZoomEffect{
+    0%{ background-size: 110% 110%;}
+    100%{ background-size: 100% 100%; }
+} */
+
+.EcoLogin_OverLay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 50px;
+    z-index: 10;
+}
+.Eco-card-content {
+    top: 50px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.EcoForm {
+    /* border:1px solid #fff; */
+    
+    margin-top: 150px;
+    width: 100%;
+    padding: 40px;
+    position: relative;
+    right: -300px !important;
+    bottom: -50px !important;
+}
+.Eco-login-credentials {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: larger;
+}
+.eco-input-credentials {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: #fff;
+    border: none !important;
+    box-shadow: 0 0.2px 0 0 white;
+    transition: all 2s ease-in-out;
+}
+.eco-input-credentials:hover {
+    transform: scale(1.1);
+}
+
+.ErrorMessage {
+    color: red;
+    font-size: large;
+}
+@media screen and (max-width: 1000px) {
+    .EcoForm {
+        /* border:1px solid #fff; */
+        
+        margin-top: 150px;
+        width: 100%;
+        padding: 40px;
+        position: relative;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+    }
+}

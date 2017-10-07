@@ -1,4 +1,4 @@
-@media screen and (min-width:700px) {
+@media screen and (min-width:800px) {
     .navbar-brand #NMKEcommerceLogo{
         position: fixed;
         top:0px !important;
@@ -16,6 +16,9 @@
     .navbar-nav{
         margin-left: 200px !important;
     }
+}
+body{
+    overflow-x: hidden !important;
 }
 .navbar-brand #NMKEcommerceLogo{
     position: fixed;
@@ -51,7 +54,7 @@
     position: relative;
     padding: 0px;
     width: 100%;
-    top:800px;
+     top:790px;
 }
 .footer-inner{
     height: 100%;
@@ -67,7 +70,7 @@
     height: 70px;
 }
 
-@media screen and (min-width:200px) and (max-width: 450px){
+@media screen and (min-width:200px) and (max-width: 799px){
     #bs-example-navbar-collapse-1{
         z-index: 1085;
         position: relative;

@@ -1,0 +1,154 @@
+<div class="row">
+        <div class="container container-fluid">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+             <div class="productInfo">
+             <p>
+              <img ng-src="{{ImagePath}}" class="img-responsive" />
+              <span class="productname" ng-bind="name"></span>
+             </p>
+             </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12 proceedContainer">
+              <form ng-submit="payment(paymentForm)" name="paymentForm" class="paymentFormOrder" novalidate>
+                <div class="form-group"> 
+                  <label class="titleLabel">Billing Address
+                  </label>                           
+                  <input type="text" class="form-control paymentFormData" placeholder="customername" name="PersonName" ng-model="PersoName" required/>
+                  <div ng-show="paymentForm.submitted || paymentForm.PersonName.$touched">
+                    <span ng-show="paymentForm.PersonName.$error.required" class="help-block ErrorCheckOut">Please Enter the customername 
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group"> 
+                  <input type="text" class="form-control paymentFormData" placeholder="Home Address" name="HomeAddress" ng-model="HomeAddress" required/>
+                  <div ng-show="paymentForm.submitted || paymentForm.HomeAddress.$touched">
+                    <span ng-show="paymentForm.HomeAddress.$error.required" class="help-block ErrorCheckOut">Please Enter the Home Address 
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group">                                                              
+                  <input type="text" class="form-control paymentFormData" placeholder="Home Address" name="HomeAddress1" ng-model="HomeAddress1" required/>
+                  <div ng-show="paymentForm.submitted || paymentForm.HomeAddress1.$touched">
+                    <span ng-show="paymentForm.HomeAddress1.$error.required" class="help-block ErrorCheckOut">Please Enter the Home Address
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group">                                                                 
+                  <input type="text" class="form-control paymentFormData" placeholder="City Name" name="CityName" ng-model="CityName" required/>
+                  <div ng-show="paymentForm.submitted || paymentForm.CityName.$touched">
+                    <span ng-show="paymentForm.CityName.$error.required" class="help-block ErrorCheckOut">Please Enter the City Name 
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group">                                                                     
+                  <input type="text" class="form-control paymentFormData" placeholder="State" name="stateName" ng-model="stateName" required/>
+                  <div ng-show="paymentForm.submitted || paymentForm.stateName.$touched">
+                    <span ng-show="paymentForm.stateName.$error.required" class="help-block ErrorCheckOut">Please Enter the State Name
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group">                                                                           
+                  <input type="text" class="form-control paymentFormData" placeholder="ZipCode" name="Zipcode" ng-model="Zipcode" required/>
+                  <div ng-show="paymentForm.submitted || paymentForm.Zipcode.$touched">
+                    <span ng-show="paymentForm.Zipcode.$error.required" class="help-block ErrorCheckOut">Please Enter the Zip Code 
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" name="SameAsBillingAddress" ng-model="SameAsBillingAddress"/>
+                  <label for ="SameAsBillingAddress"> Same As Billing Address</label>
+                </div>
+                <div ng-hide="SameAsBillingAddress">
+                  <div class="form-group"> 
+                    <label class="titleLabel">Shipping Address</label>                           
+                    <input type="text" class="form-control paymentFormData" placeholder="customername" name="PersonName" ng-model="PersoName" required/>
+                    <div ng-show="paymentForm.submitted || paymentForm.PersonName.$touched">
+                      <span ng-show="paymentForm.PersonName.$error.required" class="help-block ErrorCheckOut">Please Enter the customername 
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-group"> 
+                    <input type="text" class="form-control paymentFormData" placeholder="Home Address" name="HomeAddress" ng-model="HomeAddress" required/>
+                    <div ng-show="paymentForm.submitted || paymentForm.HomeAddress.$touched">
+                      <span ng-show="paymentForm.HomeAddress.$error.required" class="help-block ErrorCheckOut">Please Enter the Home Address 
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-group">                                                              
+                    <input type="text" class="form-control paymentFormData" placeholder="Home Address" name="HomeAddress1" ng-model="HomeAddress1" required/>
+                    <div ng-show="paymentForm.submitted || paymentForm.HomeAddress1.$touched">
+                      <span ng-show="paymentForm.HomeAddress1.$error.required" class="help-block ErrorCheckOut">Please Enter the Home Address
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-group">                                                                 
+                    <input type="text" class="form-control paymentFormData" placeholder="City Name" name="CityName" ng-model="CityName" required/>
+                    <div ng-show="paymentForm.submitted || paymentForm.CityName.$touched">
+                      <span ng-show="paymentForm.CityName.$error.required" class="help-block ErrorCheckOut">Please Enter the City Name 
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-group">                                                                     
+                    <input type="text" class="form-control paymentFormData" placeholder="State" name="stateName" ng-model="stateName" required/>
+                    <div ng-show="paymentForm.submitted || paymentForm.stateName.$touched">
+                      <span ng-show="paymentForm.stateName.$error.required" class="help-block ErrorCheckOut">Please Enter the State Name
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-group">                                                                           
+                    <input type="text" class="form-control paymentFormData" placeholder="ZipCode" name="Zipcode" ng-model="Zipcode" required/>
+                    <div ng-show="paymentForm.submitted || paymentForm.Zipcode.$touched">
+                      <span ng-show="paymentForm.Zipcode.$error.required" class="help-block ErrorCheckOut">Please Enter the Zip Code 
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                        <label class="titleLabel">Payment</label>
+                    <input type="text" class="form-control paymentInput" name="cardnumber" placeholder="Cerdit \ Debit Card Number" ng-model="cardnumber" ng-change="cardSpacing()" maxlength="19" required/>
+                    <div ng-show="paymentForm.submitted || paymentForm.cardnumber.$touched">
+                        <span ng-show="paymentForm.cardnumber.$error.required" class="ErrorCheckOut">
+                          Please provide your credit or debit card number</span>                    
+                </div>
+                </div>
+                <div class="form-group">                  
+                <input type="text" class="form-control paymentInput" name="nameOnCard" placeholder="Name on your credit or debit card" ng-model="nameOnCard" maxlength="32"  required/>
+                <div ng-show="paymentForm.submitted || paymentForm.nameOnCard.$touched">
+                    <span ng-show="paymentForm.nameOnCard.$error.required" class="ErrorCheckOut">
+                      Please provide the name on your credit or debit card</span>                    
+            </div>
+            </div>
+            <div class="form-group">                  
+                <input type="text" class="form-control paymentInput" name="MonthYEAR" placeholder="MM/YY" ng-model="MonthYear" maxlength="5" ng-change="monthyear()"  required/>
+                <div ng-show="paymentForm.submitted || paymentForm.MonthYear.$touched">
+                    <span ng-show="paymentForm.MonthYear.$error.required" class="ErrorCheckOut">
+                      Please provide the expiration date of your credit or debit card</span>                   
+            </div>
+            </div>
+            <div class="form-group">                  
+                <input type="text" class="form-control paymentInput" name="CVV" placeholder="CVV" ng-model="CVV" maxlength="3"  required/>
+                <div ng-show="paymentForm.submitted || paymentForm.CVV.$touched">
+                    <span ng-show="paymentForm.CVV.$error.required" class="ErrorCheckOut">
+                      Please provide the 3 digit security on the back of your credit or debit card</span>                   
+            </div>
+            </div>
+            <div class="form-group">                
+                <input type="submit"  class="btn btn-primary form-control pulse animated"
+                       ng-disabled="paymentForm.PersonName.$dirty && paymentForm.PersonName.$invalid
+                        || paymentForm.HomeAddress.$dirty && paymentForm.HomeAddress.$invalid
+                        ||paymentForm.HomeAddress1.$dirty && paymentForm.HomeAddress1.$invalid
+                        ||paymentForm.CityName.$dirty && paymentForm.CityName.$invalid
+                        ||paymentForm.stateName.$dirty && paymentForm.stateName.$invalid
+                        ||paymentForm.Zipcode.$dirty && paymentForm.Zipcode.$invalid
+                        ||paymentForm.cardnumber.$dirty && paymentForm.cardnumber.$invalid
+                        ||paymentForm.nameOnCard.$dirty && paymentForm.nameOnCard.$invalid
+                        ||paymentForm.MonthYEAR.$dirty && paymentForm.MonthYEAR.$invalid
+                        ||paymentForm.CVV.$dirty && paymentForm.CVV.$invalid" value="Place Order" />
+            </div>   
+              </form>
+              <div>
+              </div>
+            </div>
+          </div>
+      

@@ -1,0 +1,52 @@
+.proceedContainer{
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 6px 2px 8px 6px lightgrey;
+    top:20px !important;
+}
+/* .productInfo{ position: fixed !important;} */
+.productname{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    text-align: center !important;
+}
+.paymentFormOrder{
+  margin-top: 20px !important;
+  border: 2px sold lightgray;
+}
+.titleLabel{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    text-align: center !important;
+
+}
+.paymentFormData{
+    text-align: center !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+.ErrorCheckOut{
+    color: red;
+    font-size: large;
+}
+.paymentInput{
+    text-align: center !important;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: #111;
+    border: none !important;
+    box-shadow: 0 0.2px 0 0 lightgray;
+    transition: all 2s ease-in-out;
+}
+@media screen and (min-width: 400px) and (max-width: 500px){
+    .proceedContainer{
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 2px 2px 2px 2px lightgray;
+    }
+    .productname{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        text-align: center !important;
+        margin : auto;
+    }
+}

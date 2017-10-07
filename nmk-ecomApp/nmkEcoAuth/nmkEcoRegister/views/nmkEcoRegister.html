@@ -1,1 +1,61 @@
-<h1>Register</h1>
+<div class="nmkEcoRegister_OverLay nmkEcoRegister"></div>
+<div class="nmkEcoRegister_OverLay EcoRegister-card-content"> 
+    <div class="row">
+        <div class="container container-fluid">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 " ng-controller="nmkEcoRegisterController">
+                <form class="EcoForm" name="EcoRegForm" ng-submit="onRegister(EcoRegForm)" novalidate>
+                    <div class="form-group">
+                        <input type="text" class="form-control eco-input-credentials fadeInDown animated" placeholder="FirstName" name='firstname' ng-model="firstname" required/>
+                        <div ng-show="EcoRegForm.firstname.$touched || EcoRegForm.$submitted">
+                            <span ng-show="EcoRegForm.firstname.$error.required" class="help-block ErrorMessage">
+                                Please provide your firstname.
+                            </span>                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control eco-input-credentials fadeInUp animated" placeholder="LastName" name='lastname' ng-model='lastname' required/>
+                        <div ng-show="EcoRegForm.lastname.$touched || EcoRegForm.$submitted">
+                            <span ng-show="EcoRegForm.lastname.$error.required" class="help-block ErrorMessage">
+                                Please provide your lastname
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control eco-input-credentials fadeInDown animated" placeholder="EmailAddress" name="email" ng-model="email" required/>
+                        <div ng-show="EcoRegForm.email.$touched || EcoRegForm.$submitted">
+                            <span ng-show="EcoRegForm.email.$error.required" class="help-block ErrorMessage">Please provide your EmailAddress</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control eco-input-credentials fadeInUp animated" placeholder="MobileNumber" name="mobile" ng-model="mobile" required/>
+                        <div ng-show="EcoRegForm.mobile.$touched || EcoRegForm.$submitted">
+                            <span ng-show="EcoRegForm.mobile.$error.required" class="help-block ErrorMessage"> Please provide your mobile number</span>
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control eco-input-credentials fadeInDown animated" placeholder="Password" name="Password" ng-model="Password" required/>
+                            <div ng-show="EcoRegForm.Password.$touched || EcoRegForm.$submitted">
+                                <span ng-show="EcoRegForm.Password.$error.required" class="help-block ErrorMessage">Please provide a password of your choice.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control eco-input-credentials fadeInUp animated" placeholder="Confirm Password" name="confirmPassword" ng-model="confirmPassword" ng-change="OnChange()" required/>
+                            <div ng-show="EcoRegForm.confirmPassword.$touched || EcoRegForm.$submitted">
+                                <span ng-show="EcoRegForm.confirmPassword.$error.required" class="help-block ErrorMessage">
+                                    Please confirm your password.
+                                </span>
+                                <span ng-if="PasswordMatch" class="help-block ErrorMessage"> Password does not match</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-default form-control pulse animated" value="Register" 
+                              ng-disabled="EcoRegForm.firstname.$dirty && EcoRegForm.firstname.$invalid ||
+                                           EcoRegForm.lastname.$dirty && EcoRegForm.lastname.$invalid || 
+                                           EcoRegForm.Password.$dirty && EcoRegForm.Password.$invalid ||
+                                           EcoRegForm.confirmPassword.$dirty && EcoRegForm.confirmPassword.$invalid"/>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

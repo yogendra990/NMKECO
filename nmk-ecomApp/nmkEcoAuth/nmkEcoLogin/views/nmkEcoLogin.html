@@ -1,1 +1,31 @@
-<h1>Login</h1>
+<div class="EcoLogin EcoLogin_OverLay"></div>
+<div class="EcoLogin_OverLay Eco-card-content">
+<div class="row">
+    <div class="container container-fluid">
+        <div class="col-md-6" ng-controller="nmkEcoLoginController">
+          <form name="EcoForm" class="EcoForm" ng-submit="onLogin(EcoForm)"  novalidate>
+              <div class="form-group">                  
+                      <!-- <label for="EcoLogin" class="Eco-login-credentials">Email Address </label> -->
+                      <input id="nmkEcoLoginEmail" type="email" name="EcoLogin" ng-model="EcoLogin" placeholder="Email Address" class="form-control eco-input-credentials fadeInUp animated" required />
+                      <div ng-show="EcoForm.$submitted || EcoForm.EcoPassword.$touched">
+                          <span ng-show="EcoForm.EcoLogin.$error.required" class="help-block ErrorMessage">Please provide the registered Email</span>
+                          <span ng-show="EcoForm.EcoLogin.$error.email" class="help-block ErrorMessage">Please enter a valid Email Address </span>
+                      </div>                
+              </div>
+              <div class="form-group">
+                 <!-- <label for="EcoPassword" class="Eco-login-credentials"> Password</label> -->
+                  <input type="password" name="EcoPassword" ng-model="EcoPassword" placeholder="Password" class="form-control eco-input-credentials fadeInDown animated"" required/>
+                  <div ng-show="EcoForm.$submitted || EcoForm.EcoPassword.$touched">
+                  <span ng-show="EcoForm.EcoPassword.$error.required" class="help-block ErrorMessage">Please provide the registered Password</span>
+                  </div>
+              </div>
+              <div class="form-group">                
+                  <input type="submit"  class="btn btn-default form-control pulse animated"
+                         ng-disabled="EcoForm.EcoLogin.$dirty && EcoForm.EcoLogin.$invalid
+                          || EcoForm.EcoPassword.$dirty && EcoForm.EcoPassword.$invalid" value="Login" />
+              </div>              
+          </form>
+        </div>
+    </div>
+</div>
+

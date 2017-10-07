@@ -1,13 +1,22 @@
-.ECO_HOME{
+.ECO_HOME {
     background-image: url("../../../shared/Images/ecommercelogistics.jpg");
-    background-size: cover ;
+    background-size: cover;
     background-repeat: no-repeat;
-    width:100%;
+    width: 100%;
     max-height: 400px;
     height: 100%;
     opacity: 1 !important;
-    z-index: -10;}
-.Eco_overlay{
+    /* z-index: -10; */
+    /* animation: EcoLoginZoomEffect 5s infinite alternate;
+    -webkit-animation: EcoLoginZoomEffect  5s infinite alternate;
+    -moz-animation: EcoLoginZoomEffect 5s infinite alternate; */
+}
+/* @keyframes EcoLoginZoomEffect{
+    /* 0%{ background-size: 110% 110%;} */
+/* 100%{ background-size: 100% 100%; }
+} */
+
+.Eco_overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -15,126 +24,207 @@
     top: 50px;
     z-index: 10;
 }
-.md-card-content{
-    top:-10px;
-    background-color: rgba(0,0,0,0.4);
+.md-card-content {
+    top: -10px;
+    background-color: rgba(0, 0, 0, 0.4);
 }
-.Eco_tool{
+.Eco_tool {
     font-family: 'Times New Roman', Times, serif;
     font-size: 48px;
     text-align: center;
     margin-top: 150px;
-    color:#fff;
+    color: #fff;
 }
-
-.Eco_Info{
+.Eco_Info {
     position: relative;
-    top:380px;
+    top: 380px;
 }
-
-.Md-Info{
+.Md-Info {
     position: relative;
-    top:450px;
+    top: 450px;
     margin-top: 50px;
 }
-#Eco_info{
+#Eco_info {
     position: absolute;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     width: 100%;
 }
-.md-icon{font-size: 50px !important ;padding-top:10px !important;}
-.md-info-header1{
+.md-icon {
+    font-size: 50px !important;
+    padding-top: 10px !important;
+}
+.md-info-header1 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
 }
-.md-info1, .md-info2{text-align: center !important;}
-.Md-InfoDiv1, .Md-InfoDiv2, .Md-InfoDiv3{
+#NCOPayment,
+#NcoHookUp,
+#NcoTracking {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: x-large;
+    text-decoration: none !important;
+    color: #111 !important;
+}
+#NCOPayment:hover {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: x-large;
+    text-decoration: none !important;
+    color: #111;
+}
+#NcoHookUp:hover {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: x-large;
+    text-decoration: none !important;
+    color: #111;
+}
+#NcoTracking:hover {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: x-large;
+    text-decoration: none !important;
+    color: #111;
+}
+.md-info1,
+.md-info2 {
+    text-align: center !important;
+}
+.Md-InfoDiv1,
+.Md-InfoDiv2,
+.Md-InfoDiv3 {
     float: left;
     text-align: center !important;
-    border:1px solid lightgrey;
-    margin:5px  !important;
+    border: 1px solid lightgrey;
+    margin: 5px !important;
     padding: 10px;
-    width:100%;
+    width: 100%;
     height: 250px;
 }
-.Md-Info{
-    width:100% !important;
+.Md-Info {
+    width: 100% !important;
 }
-.Md-InfoDiv1{background-color: #ff8000;}
-.Md-InfoDiv2{background-color: #ff0040;}
-.Md-InfoDiv3{background-color: 	#ff4000;}
-.Md-InfoDiv1:hover{box-shadow: 1px 1px 1px 1px darkgray;}
-.Md-InfoDiv2:hover{box-shadow: 1px 1px 1px 1px darkgray;}
-.Md-InfoDiv3:hover{box-shadow: 1px 1px 1px 1px darkgray;}
-.md_info{
+.Md-InfoDiv1 {
+    background-color: #ff8000;
+}
+.Md-InfoDiv2 {
+    background-color: #ff0040;
+}
+.Md-InfoDiv3 {
+    background-color: #ff4000;
+}
+.Md-InfoDiv1:hover {
+    box-shadow: 1px 1px 1px 1px darkgray;
+}
+.Md-InfoDiv2:hover {
+    box-shadow: 1px 1px 1px 1px darkgray;
+}
+.Md-InfoDiv3:hover {
+    box-shadow: 1px 1px 1px 1px darkgray;
+}
+.md_info {
     font-size: x-large;
     text-align: center;
 }
-.md-info-body{
+.md-info-body {
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     text-align: center;
 }
-.md-info-body::first-letter{ font-weight: bolder;}
-.md-infoDivbanner-1,.md-infoDivbanner-2,.md-infoDivbanner-3{
+.md-info-body::first-letter {
+    font-weight: bolder;
+}
+.md-infoDivbanner-1,
+.md-infoDivbanner-2,
+.md-infoDivbanner-3 {
     position: absolute;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     bottom: 0;
-    top:0;
+    top: 0;
     right: 0;
     left: 0;
     opacity: 0.5 !important;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
-.md-infoDivbanner-1:hover{
-    background-color: rgba(0, 0,0,0) !important;
+.md-infoDivbanner-1:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
     transform: scaleX(1.1) !important;
 }
-.md-infoDivbanner-2:hover{
-    background-color: rgba(0, 0,0,0) !important;
+.md-infoDivbanner-2:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
     transform: scaleX(1.1) !important;
 }
-.md-infoDivbanner-3:hover{
-    background-color: rgba(0, 0,0,0) !important;
+.md-infoDivbanner-3:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
     transform: scaleX(1.1) !important;
 }
-@media screen and (min-width:200px) and (max-width:450px){
-
-    .Eco_tool{
+@media screen and (min-width: 200px) and (max-width: 450px) {
+    .Eco_tool {
         font-family: 'Times New Roman', Times, serif;
         font-size: large !important;
         text-align: center;
         margin-top: 150px;
-        color:#fff;
+        color: #fff;
     }
-    #Eco_info{
+    #Eco_info {
         position: absolute;
         font-family: 'Times New Roman', Times, serif;
         font-size: large !important;
         text-align: center;
         width: 100%;
     }
-    .Md-Info{
+    .Md-Info {
         position: relative;
-        top:450px;
-        margin:auto;
+        top: 450px;
+        margin: auto;
     }
-    md-icon{font-size: larger;padding-top:10px;}
-    .md-info-header-1, .md-info-header-2, .md-info-header-3{
+    md-icon {
+        font-size: larger;
+        padding-top: 10px;
+    }
+    .md-info-header-1,
+    .md-info-header-2,
+    .md-info-header-3,
+    {
         text-align: center;
         font-family: 'Times New Roman', Times, serif;
         font-size: small;
+        color: #111 !important;
     }
-    .md-info1{text-align: center !important;}
-    .md-info-body{
+    .md-info1 {
+        text-align: center !important;
+    }
+    .md-info-body {
         font-family: 'Times New Roman', Times, serif;
         font-size: xx-small;
         text-align: center;
     }
-    .md-info-body::first-letter{ font-weight: bolder;}
-
-
+    .md-info-body::first-letter {
+        font-weight: bolder;
+    }
+    #NCOPayment,
+    #NcoHookUp {
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: large;
+        text-decoration: none !important;
+        color: #111 !important;
+    }
+    #NCOPayment:hover {
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: larger;
+        text-decoration: none !important;
+        color: #111;
+    }
+    #NcoHookUp:hover {
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: larger;
+        text-decoration: none !important;
+        color: #111;
+    }
+    #NcoTracking:hover {
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: x-large;
+        text-decoration: none !important;
+        color: #111;
+    }
 }
