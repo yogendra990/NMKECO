@@ -23,7 +23,12 @@
                   <input type="submit"  class="btn btn-default form-control pulse animated"
                          ng-disabled="EcoForm.EcoLogin.$dirty && EcoForm.EcoLogin.$invalid
                           || EcoForm.EcoPassword.$dirty && EcoForm.EcoPassword.$invalid" value="Login" />
-              </div>              
+              </div>
+              <div class="form-group">
+                  <span ng-if="validated">
+                  <img ng-src="{{PreloaderLogin}}" height="128" width="128"/>
+                  </span>
+              </div>
           </form>
         </div>
     </div>

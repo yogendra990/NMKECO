@@ -26,5 +26,10 @@
     list-style: none !important;
 
 }
-
+table tbody tr td{
+    background-color: #fff !important;
+}
+.productShadow{
+    box-shadow: 6px 2px 8px 6px lightgrey !important;
+}
   
