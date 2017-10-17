@@ -1,10 +1,11 @@
 (function() {
   'use strict';
   var nmkEcoApp = angular.module('nmkEco');
-  nmkEcoApp.controller('nmkEcoProductController', ['$scope', '$state', '$stateParams', 'nmkEcoAuthService', '$rootScope', '$localStorage', function($scope, $state, $stateParams, nmkEcoAuthService, $rootScope, $localStorage) {
+  nmkEcoApp.controller('nmkEcoProductController', ['$scope', '$state', '$stateParams', 'nmkEcoAuthService', '$rootScope', '$localStorage', 
+                       function($scope, $state, $stateParams, nmkEcoAuthService, $rootScope, $localStorage) {
       var vm = this;
       $scope.productName = $stateParams.CategoryName;
-      $scope.productList = [];
+      $scope.productList = [];  
       angular.forEach($localStorage.product,function(v){
         $scope.productList.push({name:v.name,ImagePath:v.ImagePath});
       });    
@@ -56,5 +57,37 @@
       $rootScope.$on('upDataCartVal', function(e, d) {
           nmkEcoAuthService.cartval = d;
       });
+      $scope.nmkEcoCategory = function(){
+        vm.UrlCate = "/category-api-service/api/v1/category";
+        $scope.CategoryList = [];
+        vm.OnSuccess = function(response){
+            if(response){
+                angular.forEach(response.data.category,function(v,k){
+                    $scope.CategoryList.push({name:v.name});
+                });
+            }
+        };
+        vm.OnError = function(response){
+            if(response){
+                console.log(response);
+            }
+        };
+        nmkEcoAuthService.Category(vm.UrlCate).then(vm.OnSuccess,vm.OnError);
+    };
+    $scope.nmkEcoBrand = function(){
+        vm.UrlCate="/brand-api-service/api/v1/brand";
+        $scope.BrandList  = [];
+        vm.OnSuccess = function(response){
+            if(response){
+                angular.forEach(response.data.brand,function(v,k){
+                    $scope.BrandList.push({name:v.name});
+                })
+            }
+        };
+        vm.OnError = function(response){
+            console.log(response);
+        }
+        nmkEcoAuthService.Category(vm.UrlCate).then(vm.OnSuccess,vm.OnError);
+    }
   }])
 })();

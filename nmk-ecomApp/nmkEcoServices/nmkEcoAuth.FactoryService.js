@@ -3,48 +3,47 @@
     var nmkEcoApp = angular.module('nmkEco');
     nmkEcoApp.factory('nmkEcoAuthService', ['$http', '$q', function($http, $q) {
         var nmkEcoAuthService = {};
-        nmkEcoAuthService.ValidateUser = function(apiKey, params) {
+        var vm = this;      
+        nmkEcoAuthService.LoginService = function(url){
             var defer = $q.defer();
-            var urlBaseUser = 'https://api.ed.gov/data/mbk-highschool-dropout?api_key=' + apiKey + params;
-            var headers = {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT',
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-            var onSuccess = function(response) {
-                if (response) {
-                    return defer.resolve(response);
+            vm.OnSucess = function(response){
+                if(response){
+                    defer.resolve(response);
                 }
             };
-            var onError = function(response) {
-                if (response) {
-                    return defer.reject(response);
-                }
-            }
-
-            return $http({
-                method: 'GET',
-                url: urlBaseUser,
-                headers: headers,
-                cache: true
-            }).then(onSuccess, onError);
-            return defer.promise();
+            vm.OnError = function(response){
+                defer.reject(response);
+            }            
+            $http({
+               method:'GET',
+               url:url,
+            //    headers:Header
+            }).then(vm.OnSucess,vm.OnError);
+            return defer.promise;
         };
-        nmkEcoAuthService.Register = function(UserRegObj) {
+        nmkEcoAuthService.RegisterUser = function(UrlBaseReg,UserRegObj) {
             var defer = $q.defer();
-            return $http({
-                method: 'POST',
-                url: urlBaseReg
-            });
+
+           vm.onSuccessRegister = function(response){
+               if(response){ defer.resolve(response)}
+           }
+           vm.onError = function(response){
+               if(response) { defer.reject(response)}
+           };
+            $http({
+                url: UrlBaseReg,
+                method: 'POST',                              
+                data:UserRegObj,               
+            }).then(vm.onSuccessRegister,vm.onError);
+            return defer.promise;
         }
 
         nmkEcoAuthService.WalMart = function(urlInfo) {
             var defer = $q.defer();
-            var onSuccess = function(response) {
+            vm.onSuccess = function(response) {
                 defer.resolve(response);
             };
-            var onError = function(response) {
+            vm.onError = function(response) {
                 if (response) {
                     defer.reject(response);
                 }
@@ -53,7 +52,38 @@
                 url: urlInfo,
                 method: "GET",
                 cache: true
-            }).then(onSuccess, onError);
+            }).then(vm.onSuccess,vm.onError);
+            return defer.promise;
+        };
+        nmkEcoAuthService.Category = function(urlCate){
+            var defer = $q.defer();
+            vm.onSuccess = function(response){
+                defer.resolve(response);
+            };
+            vm.onError = function(response){
+                defer.reject(response);
+            }
+            $http({
+                url:urlCate,
+                method:'GET',
+                cache:true
+            }).then(vm.onSuccess,vm.onError);
+            return defer.promise;
+            };
+        nmkEcoAuthService.UpdateUserInfo = function(url,UserObj){
+            var defer = $q.defer();
+            vm.onSuccess = function(response){
+                defer.resolve(response);
+            }
+            vm.onError = function(response){
+                defer.reject(response);
+            }
+            $http({
+                url:url,
+                method:"PUT",
+                data:UserObj,
+                cache:true
+            }).then(vm.onSuccess,vm.onError);
             return defer.promise;
         };
         nmkEcoAuthService.MyCart = [];

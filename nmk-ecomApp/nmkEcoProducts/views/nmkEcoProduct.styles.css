@@ -30,6 +30,7 @@ table tbody tr td{
     background-color: #fff !important;
 }
 .productShadow{
+    margin-top: 20px !important;   
     box-shadow: 6px 2px 8px 6px lightgrey !important;
 }
   

@@ -12,7 +12,8 @@
             loginUrl = "/nmkEcoAuth/nmkEcoLogin/views/",
             registerUrl = "/nmkEcoAuth/nmkEcoRegister/views/",
             trackingUrl = "/nmkEcoTracking/views/",
-            CheckOutUrl = "/nmkEcoCheckOut/views/";
+            CheckOutUrl = "/nmkEcoCheckOut/views/",
+            MyAccountUrl = "/nmkEcoMyAccount/views/";
 
         var Home = {
                 name: 'Home',
@@ -85,6 +86,18 @@
                 url:'/proceedToCheckOut/:image/:ProductName',
                 templateUrl:rootUrl + CheckOutUrl + 'nmkEcoCheckout.html',
                 controller:'nmkEcoCheckOutController'
+            },
+            OnSuccessLogin = {
+                name:'LoggedIn',
+                url:'/LoggedIn/:IsSignedIn',
+                templateUrl: rootUrl + productUrl + 'nmkEcoProducts.html',
+                controller:'nmkEcoProductController'
+            },
+            MyAccount = {
+                name:'MyAccount',
+                url:'/MyAccount',
+                templateUrl:rootUrl+MyAccountUrl+'nmkEcoMyAccount.view.html',
+                controller:'nmkEcoMyAccountController'
             };
         $stateProvider.state(Home);
         $stateProvider.state(contactUs);
@@ -99,6 +112,8 @@
         $stateProvider.state(Register);
         $stateProvider.state(productList);
         $stateProvider.state(proceedToCheckOut);
+        $stateProvider.state(OnSuccessLogin);
+        $stateProvider.state(MyAccount);
         $urlRouterProvider.otherwise('/home');
     }])
 })();

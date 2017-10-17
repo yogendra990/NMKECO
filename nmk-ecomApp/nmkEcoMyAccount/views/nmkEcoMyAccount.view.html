@@ -1,0 +1,84 @@
+<div class="row">
+        <div class="container container-fluid">
+           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <table class="table table-bordered table-responsive accountContainer">
+                 <thead>
+                    <th>
+                       <h1 class="MyInfo">Personal Information</h1>
+                    </th>
+                 </thead>
+                 <tbody>
+                    <tr>
+                       <td>
+                          <table class="table table-bordered table-responsive">
+                             <tbody>
+                                <tr>
+                                   <td class="MyInfo">
+                                      <label>firstName</label>
+                                   </td>
+                                   <td class="MyInfo">
+                                      <a href="#" editable-text="userInformation.firstName" ng-bind="userInformation.firstName"  onbeforesave="firstnamme($data)"></a>
+                                   </td>
+                                </tr>
+                                <tr>
+                                   <td class="MyInfo">
+                                      <label>lastName</label>
+                                   </td>
+                                   <td class="MyInfo">
+                                      <a href="#" editable-text="userInformation.lastName" ng-bind="userInformation.lastName" onbeforesave="lastnamme($data)"></a>
+                                   </td>
+                                </tr>
+                                <td class="MyInfo">
+                                   <label>userName</label>
+                                </td>
+                                <td class="MyInfo">
+                                   <a href="#" editable-text="userInformation.userId" ng-bind="userInformation.userId" onbeforesave="userIdd($data)"></a>
+                                </td>
+                                </tr>
+                                <tr>
+                                   <td class="MyInfo">
+                                      <label>Password</label>
+                                   </td>
+                                   <td class="MyInfo">
+                                      <a href="#" editable-text="userInformation.pwd" ng-bind="userInformation.pwd" onbeforesave="password($data)"></a>
+                                   </td>
+                                </tr>
+                                <tr>
+                                   <td class="MyInfo">
+                                      <label>Email Address</label>
+                                   </td>
+                                   <td class="MyInfo">
+                                      <a href="#" editable-text="userInformation.emailAdrress" ng-bind="userInformation.emailAddress" onbeforesave="Email($data)"></a>
+                                   </td>
+                                </tr>
+                                <tr>
+                                   <td class="MyInfo">
+                                      <label>Mobile Phone</label>
+                                   </td>
+                                   <td class="MyInfo">
+                                      <a href="#" editable-text="userInformation.mobilePhone" ng-bind="userInformation.mobilePhone" onbeforesave="mobilephonne($data)"></a>
+                                   </td>
+                                </tr>
+                                <tr>
+                                   <td class="MyInfo">
+                                      <label>Home Phone</label>
+                                   </td>
+                                   <td class="MyInfo">
+                                      <a href="#" editable-text="userInformation.homePhone" ng-bind="userInformation.homePhone" onbeforesave="homephonne($data)"></a>
+                                   </td>
+                                </tr>
+                                <tr>
+                             </tbody>
+                          </table>
+                       </td>
+                    </tr>
+                    <tr>
+                       <td>
+                          <button class="btn btn-primary userbtn" ng-click="UpdateInfo()">update</button>
+                       </td>
+                    </tr>
+                 </tbody>
+              </table>
+           </div>
+        </div>
+     </div>

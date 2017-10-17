@@ -1,0 +1,12 @@
+.accountContainer{
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 6px 2px 8px 6px lightgrey;
+    top:20px !important;
+}
+.MyInfo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center !important;
+}
+.userbtn{
+    width: 100% !important;
+}
